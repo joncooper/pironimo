@@ -1,0 +1,9 @@
+!!! 5
+%html
+  %head
+    = csrf_meta_tag
+    /[if lt IE 9]
+      = javascript_include_tag 'html5'
+    = stylesheet_link_tag 'compiled/screen'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Geo'
+  = yield
