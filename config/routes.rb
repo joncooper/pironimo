@@ -4,6 +4,10 @@ Pironimo::Application.routes.draw do
   
   root :to => 'static#index'
   
+  resources :pages
+  resources :posts
+  resources :comments
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

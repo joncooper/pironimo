@@ -9,6 +9,6 @@ Factory.sequence(:page_title) do |n|
 end
 
 Factory.define :page do |f|
-  f.title { Factory(:page_slug) }
-  f.slug  { Factory(:page_title) }
+  f.title { Factory(:page_title) }
+  f.slug  { Factory(:page_slug) }
 end
