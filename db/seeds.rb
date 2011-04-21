@@ -5,11 +5,12 @@ user_info = {
   :name => 'Jon Cooper',
   :email => 'jon.cooper@gmail.com',
   :initials => 'jdc',
-  :tip_css => '{color:orange}',
+  :tip_css => 'background-color:orange;',
   :password => 'throwaway',
-  :password_confirmation => 'throwaway'
+  :password_confirmation => 'throwaway',
 }
 user = User.create!(user_info)
+user.confirm!
 puts 'Created user: ' << user.name
 
 front_page_info = {
