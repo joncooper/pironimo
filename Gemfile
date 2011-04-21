@@ -28,8 +28,11 @@ gem 'rails', '3.0.5'
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "mongoid", "2.0.0.rc.7"
+
+gem "mongoid", "~> 2.0.0"
 gem "bson_ext", "~> 1.2"
+gem "mongoid-tree", :git => 'git://github.com/benedikt/mongoid-tree', :require => 'mongoid/tree'
+
 gem "rspec-rails", ">= 2.4.1", :group => [:development]
 gem "remarkable_activemodel", ">=4.0.0.alpha4", :group => :test
 gem "remarkable_mongoid", :group => :test
@@ -42,3 +45,4 @@ gem "compass"
 gem "capybara", "0.4.0", :group => :test
 gem "cucumber-rails", :group => :test
 gem "launchy", :group => :test
+

@@ -1,5 +1,7 @@
 Pironimo::Application.routes.draw do
   
+  resources :front_pages
+
   root :to => 'static#index'
   
   # The priority is based upon order of creation:
