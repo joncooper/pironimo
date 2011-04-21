@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '~> 3.0.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -32,6 +32,7 @@ gem 'rails', '3.0.5'
 gem "mongoid", "~> 2.0.0"
 gem "bson_ext", "~> 1.2"
 gem "mongoid-tree", :git => 'git://github.com/benedikt/mongoid-tree', :require => 'mongoid/tree'
+gem "devise", ">= 1.3.1"
 
 gem "rspec-rails", ">= 2.4.1", :group => [:development]
 gem "remarkable_activemodel", ">=4.0.0.alpha4", :group => :test

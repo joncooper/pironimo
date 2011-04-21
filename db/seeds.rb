@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+Mongoid.master.collections.reject { |c| c.name =~ /^system/ }.each(&:drop)
+puts 'Emptied the MongoDB database.'
+
+user_info = {
+  :name => 'Jon Cooper',
+  :email => 'jon.cooper@gmail.com',
+  :initials => 'jdc',
+  :tip_css => '{color:orange}',
+  :password => 'throwaway',
+  :password_confirmation => 'throwaway'
+}
+user = User.create!(user_info)
+puts 'Created user: ' << user.name
+
+front_page_info = {
+  :slug => "front",
+  :title => "P-1-R-O-N-1-M-0: It's not just for breakfast anymore."
+}
+front_page = Page.create!(front_page_info)
+puts 'Created front page.'
