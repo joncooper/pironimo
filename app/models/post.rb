@@ -4,7 +4,7 @@ class Post
 
   field :body, :type => String
 
-  embedded_in :page
+  belongs_to :page
   belongs_to :user
   has_many :comments
   
